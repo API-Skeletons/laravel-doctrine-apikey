@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/API-Skeletons/laravel-doctrine-apikey/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/API-Skeletons/laravel-doctrine-apikey/actions/workflows/continuous-integration.yml?query=branch%3Amain)
 [![Code Coverage](https://codecov.io/gh/API-Skeletons/laravel-doctrine-apikey/branch/main/graphs/badge.svg)](https://codecov.io/gh/API-Skeletons/laravel-doctrine-apikey/branch/main)
-[![PHP Version](https://img.shields.io/badge/PHP-8.0%2b-blue)](https://img.shields.io/badge/PHP-8.0%2b-blue)
+[![PHP Version](https://img.shields.io/badge/PHP-8.1%2b-blue)](https://img.shields.io/badge/PHP-8.1%2b-blue)
 [![Total Downloads](https://poser.pugx.org/api-skeletons/laravel-doctrine-apikey/downloads)](//packagist.org/packages/api-skeletons/laravel-doctrine-apikey)
 [![License](https://poser.pugx.org/api-skeletons/laravel-doctrine-apikey/license)](//packagist.org/packages/api-skeletons/laravel-doctrine-apikey)
 
