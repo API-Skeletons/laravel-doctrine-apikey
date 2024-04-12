@@ -20,17 +20,18 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "laravel-doctrine/orm": "^1.6",
+        "php": "^8.1",
+        "laravel-doctrine/orm": "^2.0",
         "api-skeletons/laravel-api-problem": "^1.0.1"
     },
     "require-dev": {
-        "doctrine/coding-standard": "^9.0",
-        "doctrine/dbal": "^3.1.1",
-        "doctrine/annotations": "^1.13.2",
-        "orchestra/testbench": "^6.23",
+        "doctrine/coding-standard": "^12.0",
+        "doctrine/dbal": "^3.8",
+        "doctrine/annotations": "^2.0",
         "phpunit/phpunit": "^9.5",
-        "vimeo/psalm": "^4.15"
+        "vimeo/psalm": "^4.15",
+        "orchestra/testbench": "^7.41",
+        "php-parallel-lint/php-parallel-lint": "^1.4"
     },
     "extra": {
         "laravel": {
@@ -40,6 +41,16 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpcs && vendor/bin/phpunit && vendor/bin/psalm"
+        "test": [
+            "parallel-lint src/ test/",
+            "vendor/bin/phpcs",
+            "vendor/bin/psalm",
+            "vendor/bin/phpunit"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

@@ -14,23 +14,17 @@ use function implode;
 
 abstract class Command extends IlluminateCommand
 {
-    protected ApiKeyService $apiKeyService;
-
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct(ApiKeyService $apiKeyService)
+    public function __construct(protected ApiKeyService $apiKeyService)
     {
         parent::__construct();
-
-        $this->apiKeyService = $apiKeyService;
     }
 
-    /**
-     * @param ApiKey[] $apiKeys
-     */
+    /** @param ApiKey[] $apiKeys */
     protected function printApiKeys(array $apiKeys): void
     {
         $headers = ['name', 'api_key', 'status', 'scopes'];
@@ -53,9 +47,7 @@ abstract class Command extends IlluminateCommand
         $this->table($headers, $rows);
     }
 
-    /**
-     * @param Scope[] $scopes
-     */
+    /** @param Scope[] $scopes */
     protected function printScopes(array $scopes): void
     {
         $headers = ['name', 'apikey count'];

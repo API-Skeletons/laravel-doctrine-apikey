@@ -13,17 +13,14 @@ use function substr;
 
 class AuthorizeApiKey
 {
-    private ApiKeyService $apiKeyService;
-
-    public function __construct(ApiKeyService $apiKeyService)
+    public function __construct(private ApiKeyService $apiKeyService)
     {
-        $this->apiKeyService = $apiKeyService;
     }
 
     /**
      * Handle request
      */
-    public function handle(Request $request, Closure $next, ?string $scope = null): mixed
+    public function handle(Request $request, Closure $next, string|null $scope = null): mixed
     {
         $header = $request->header('Authorization');
         if (! $header) {

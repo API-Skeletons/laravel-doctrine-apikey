@@ -133,7 +133,7 @@ class ApiKeyRepository extends EntityRepository
 
         if (! $found) {
             throw new ApiKeyDoesNotHaveScope(
-                'The requested Scope to remove does not exist on the ApiKey'
+                'The requested Scope to remove does not exist on the ApiKey',
             );
         }
 

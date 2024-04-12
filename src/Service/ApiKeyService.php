@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 
 class ApiKeyService
 {
-    private ?EntityManager $entityManager = null;
+    private EntityManager|null $entityManager = null;
 
     public function getEntityManager(): EntityManager
     {
